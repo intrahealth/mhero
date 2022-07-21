@@ -1,0 +1,71 @@
+# Project information
+site_name: 'mHero Documentation'
+site_description: 'mHero Documentation'
+site_author: 'IntraHealth'
+site_url: 'https://github.com/kwirica/mhero_docs'
+
+# Repository
+repo_name: 'kwirica/mHero'
+repo_url: 'https://github.com/kwirica/mhero_docs'
+
+# Copyright
+copyright: 'Copyright &copy; 2021 IntraHealth International'
+
+# Theme
+theme:
+  name: 'material'
+  palette:
+    primary: 'Noto Sans HK'
+    accent: 'indigo'
+  language: 'en'
+  font:
+    text: 'Roboto'
+    code: 'Monaco'
+  features:
+    - navigation.expand
+    # - navigation.tabs
+    - toc.integrate
+
+nav:
+  - Welcome to mHero!:
+      - 'index.md'
+  - Getting started:
+      - 'getting_started/getting_started.md'
+  - Server administration:
+      - 'server_administration/server_administration.md'
+  - User Guide:
+      - 'user_guide/introduction.md'
+      - 'user_guide/overview.md'
+      - 'user_guide/managing_contacts.md'
+      - 'user_guide/sending_messages.md'
+      - 'user_guide/reports.md'
+      - 'user_guide/system_administration.md'
+
+markdown_extensions:
+  - admonition
+  - footnotes
+  - md_in_html
+  - attr_list
+
+  - codehilite:
+      guess_lang: false
+  - toc:
+      toc_depth: '1'
+      permalink: true
+
+# https://github.com/zhaoterryy/mkdocs-pdf-export-plugin not working
+plugins:
+  - search
+  - git-revision-date-localized
+  #- mknotebooks
+  # - pdf-export:
+  #     combined: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/kwirica/mhero_docs
+# theme:
+# logo: 'images/logo.png' must be 128x128
+# logo:
+#   icon: 'menu_book'
